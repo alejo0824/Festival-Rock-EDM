@@ -1,0 +1,27 @@
+{
+  "name": "festival-rock-edm",
+  "version": "1.0.0",
+  "description": "Aprendiendo Gulp con Node JS y SASS",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/alejo0824/Festival-Rock-EDM.git"
+  },
+  "author": "Alejandro Tellez",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/alejo0824/Festival-Rock-EDM/issues"
+  },
+  "homepage": "https://github.com/alejo0824/Festival-Rock-EDM#readme",
+  "devDependencies": {
+    "gulp": "^4.0.2",
+    "gulp-imagemin": "^8.0.0",
+    "gulp-plumber": "^1.2.1",
+    "gulp-sass": "^5.1.0",
+    "gulp-webp": "^4.0.1",
+    "sass": "^1.54.5"
+  }
+}
