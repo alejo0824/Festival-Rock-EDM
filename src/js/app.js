@@ -31,6 +31,11 @@ function mostrarImagen(id) {
 
     overlay.appendChild(imagen);
     overlay.classList.add('overlay');
+    overlay.onclick = function() {
+        const body = document.querySelector('body');
+        body.classList.remove('fijar-body')
+        overlay.remove();
+    }
 
     const cerrarModal = document.createElement('P');
     cerrarModal.textContent = 'X';
