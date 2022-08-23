@@ -1,5 +1,7 @@
 document.addEventListener('DOMContentLoaded', function() {
     iniciarApp();
+    scrollNav();
+    navegacionFija();
 });
 
 function iniciarApp() {
@@ -52,4 +54,36 @@ function mostrarImagen(id) {
     body.appendChild(overlay);
     body.classList.add('fijar');
 
+}
+
+function scrollNav() {
+    const enlaces = document.querySelectorAll('.navegacion-principal');
+
+    enlaces.forEach(enlace => {
+        enlace.addEventListener('click', function(e) {
+            e.preventDefault();
+            const seccionScroll = e.target.attributes.href.value;
+            const seccion = document.querySelector(seccionScroll);
+
+            seccion.scrollIntoView({ behavior: "smooth" });
+        });
+    });
+}
+
+
+function navegacionFija() {
+    const barra = document.querySelector('.header');
+    const sobreFestival = document.querySelector('.sobre-festival');
+    const body = document.querySelector('body');
+
+    window.addEventListener('scroll', function() {
+
+        if (sobreFestival.getBoundingClientRect().top < 0) {
+            barra.classList.add('fijo');
+            body.classList.add('body-scroll');
+        } else {
+            barra.classList.remove('fijo');
+            body.classList.remove('body-scroll');
+        }
+    })
 }
