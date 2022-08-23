@@ -13,6 +13,27 @@ function crearGaleria() {
         imagen.innerHTML = `            
             <img  src="build/img/thumb/${i}.jpg" alt="Imagen ">
         `;
+
+        imagen.onclick = function() {
+            mostrarImagen(i);
+        }
+
         galeria.appendChild(imagen);
     }
+}
+
+function mostrarImagen(id) {
+    const overlay = document.createElement('DIV')
+    const imagen = document.createElement('DIV')
+    imagen.innerHTML = `            
+        <img  src="build/img/grande/${id}.jpg" alt="Imagen ">
+    `;
+
+    overlay.appendChild(imagen);
+    overlay.classList.add('overlay');
+
+    const body = document.querySelector('body');
+    body.appendChild(overlay);
+    body.classList.add('fijar');
+
 }

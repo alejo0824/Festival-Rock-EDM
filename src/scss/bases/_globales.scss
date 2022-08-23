@@ -13,7 +13,7 @@ html {
 body {
     font-family: v.$fuente_principal;
     font-size: 1.6rem;
-    &.fijar-body {
+    &.fijar {
         overflow: hidden;
     }
     &.body-scroll {
