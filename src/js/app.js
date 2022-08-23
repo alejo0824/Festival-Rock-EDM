@@ -1,5 +1,6 @@
 document.addEventListener('DOMContentLoaded', function() {
     iniciarApp();
+    scrollNav();
 });
 
 function iniciarApp() {
@@ -52,4 +53,18 @@ function mostrarImagen(id) {
     body.appendChild(overlay);
     body.classList.add('fijar');
 
+}
+
+function scrollNav() {
+    const enlaces = document.querySelectorAll('.navegacion');
+
+    enlaces.forEach(enlace => {
+        enlace.addEventListener('click', function(e) {
+            e.preventDefault();
+            const seccionScroll = e.target.attributes.href.value;
+            const seccion = document.querySelector(seccionScroll);
+
+            seccion.scrollIntoView({ behavior: "smooth" });
+        });
+    });
 }
